@@ -30,16 +30,15 @@ export default function EditShipmentData(props) {
   return (
     <>
       <Button
-        variant="primary"
+        className="m-2 text-white"
+        variant="info"
         onClick={handleShow}>
-        Details
+        <i class="bi bi-person-vcard-fill"></i>
       </Button>
       <Modal
         show={show}
         onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Shipment Details</Modal.Title>
-        </Modal.Header>
+        <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <form
             id="modal"
@@ -47,13 +46,13 @@ export default function EditShipmentData(props) {
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2"
                   htmlFor="order">
                   Order No.
                 </label>
                 <input
                   disabled
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  className="opacity-50 appearance-none block w-full bg-gray-200 text-gray-500 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="order"
                   type="text"
                   value={orderNo}
@@ -64,12 +63,12 @@ export default function EditShipmentData(props) {
               </div>
               <div className="w-full md:w-1/2 px-3">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2"
                   htmlFor="date">
                   Delivery Date
                 </label>
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  className="appearance-none block w-full bg-gray-200 text-gray-500 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="date"
                   type="text"
                   value={date}
@@ -82,12 +81,12 @@ export default function EditShipmentData(props) {
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2"
                   htmlFor="customer">
                   Customer
                 </label>
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  className="appearance-none block w-full bg-gray-200 text-gray-500 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="order"
                   type="text"
                   value={customer}
@@ -98,12 +97,12 @@ export default function EditShipmentData(props) {
               </div>
               <div className="w-full md:w-1/2 px-3">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2"
                   htmlFor="tracking">
                   Tracking No.
                 </label>
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  className="appearance-none block w-full bg-gray-200 text-gray-500 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="tracking"
                   type="text"
                   value={trackingNo}
@@ -116,12 +115,12 @@ export default function EditShipmentData(props) {
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2"
                   htmlFor="status">
                   Status
                 </label>
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  className="appearance-none block w-full bg-gray-200 text-gray-500 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="status"
                   type="text"
                   value={status}
@@ -132,12 +131,12 @@ export default function EditShipmentData(props) {
               </div>
               <div className="w-full md:w-1/2 px-3">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2"
                   htmlFor="consignee">
                   Consignee
                 </label>
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  className="appearance-none block w-full bg-gray-200 text-gray-500 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="consignee"
                   type="text"
                   value={consignee}
@@ -151,13 +150,13 @@ export default function EditShipmentData(props) {
         </Modal.Body>
         <Modal.Footer>
           <button
-            className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
+            className="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded"
             form="modal"
             onClick={handleClose}>
             Close
           </button>
           <button
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+            className="bg-cyan-400 hover:bg-cyan-500 text-white font-bold py-2 px-4 rounded"
             form="modal"
             onClick={handleUpdate}>
             Update
